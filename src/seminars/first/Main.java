@@ -10,6 +10,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.*; // Импортируем классы библиотеки assertJ
 
 public class Main {
+<<<<<<< HEAD
 
     // Типы ошибок. Синтаксические
 //    public static void main(String[] args) {
@@ -36,16 +37,26 @@ public class Main {
 //  }
 
     public static void main(String[] args) {
+=======
+    public static void main(String[] args) {
+        // Проверьте, как работают методы:
+
+>>>>>>> a84acbfa653df6d6723437b016a3259102bc1f70
         // assertConditionA();
 
         // assertConditionB();
 
+<<<<<<< HEAD
         // System.out.println(sum(2_147_483_647, 2));
+=======
+        // System.out.println(sum(2_147_483_647, 1));
+>>>>>>> a84acbfa653df6d6723437b016a3259102bc1f70
 
         // happyNY();
 
         // expectedValue();
 
+<<<<<<< HEAD
         // checkingShoppingCart();
 
         // String[] colors = {"...", "...",};
@@ -55,6 +66,27 @@ public class Main {
         // List<String> heroBag = Arrays.asList("Bow", "Axe", "Gold");
         // Hero emmett = new Hero("Emmett", 50, "sword", heroBag, true);
         // checkingCreationOfHero(emmett);
+=======
+        // checkingShoppingCart()
+
+        /*
+                assertThat(colors)
+                        .isNotEmpty()             // Массив не должен быть пустым
+                        .hasSize(7)               // Размер массива должен быть равен 7
+                        .doesNotHaveDuplicates()  // Массив не должен содержать повторяющихся элементов
+                        .contains("orange", "green", "violet") // Массив должен содержать цвета: "orange", "green", "violet"
+                        .endsWith("gold")        //  Последним цветом в массиве должен быть "gold"
+                        .startsWith("aqua")     // Первым цветом в массиве должен быть "aqua"
+                        .containsSequence("yellow", "blue") // В массиве должна быть последовательность цветов "yellow", "blue"
+                        .doesNotContain("red", "black");    //Массив не должен содержать цвета: "red", "black"
+        */
+
+        //  String[] colors = {};
+
+        //  testingJavaCollectionsAssertJ(colors);
+
+        //  checkingHero();
+>>>>>>> a84acbfa653df6d6723437b016a3259102bc1f70
     }
 
     //                  Практические задания:
@@ -76,7 +108,10 @@ public class Main {
     // Ariane V - https://habr.com/ru/company/pvs-studio/blog/306748/
     // sum(2_147_483_647, 1) возвращает "-2147483648"
     public static int sum(int a, int b) {
+<<<<<<< HEAD
         assert (Integer.MAX_VALUE - a >= b) : "Значение выражения вышло за пределы переменной";
+=======
+>>>>>>> a84acbfa653df6d6723437b016a3259102bc1f70
         return a + b;
     }
 
@@ -88,9 +123,13 @@ public class Main {
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         String currentDateTime = dateFormat.format(calendar.getTime());
 
+<<<<<<< HEAD
         // Получили строку currentDateTime в формате "09/12/2022 20:20:04"
 
         assert currentDateTime.equals("01/01/2023 00:00:00") : "Еще 2022 год :(";
+=======
+        assert currentDateTime.equals("01/01/2023 00:00:00") : "Еще 2023 год :(";
+>>>>>>> a84acbfa653df6d6723437b016a3259102bc1f70
         System.out.println("С новым годом!");
     }
 
@@ -124,8 +163,13 @@ public class Main {
 
     // 1.6
     //   AssertJ
+<<<<<<< HEAD
     // ok - assertThat(actual).isEqualTo(expected);
     // not ok - assertThat("expected").isEqualTo("actual");
+=======
+    // ok - assertThat(actual/фактическое).isEqualTo(expected/ожидаемое);
+    // not ok - assertThat(expected/ожидаемое).isEqualTo(actual/фактическое);
+>>>>>>> a84acbfa653df6d6723437b016a3259102bc1f70
     public static void expectedValue() {
         assertThat(5).isEqualTo(sum(2, 3));
     }
@@ -133,6 +177,7 @@ public class Main {
     // 1.7
     public static void testingJavaCollectionsAssertJ(String[] colors) {
         assertThat(colors)
+<<<<<<< HEAD
                 .isNotEmpty()
                 .hasSize(7)
                 .doesNotHaveDuplicates()
@@ -141,13 +186,28 @@ public class Main {
                 .startsWith("aqua")
                 .containsSequence("yellow", "blue")
                 .doesNotContain("red", "black");
+=======
+                .isNotEmpty()             // Массив не должен быть пустым
+                .hasSize(7)      // Размер массива должен быть равен 7
+                .doesNotHaveDuplicates() // Массив не должен содержать повторяющихся элементов
+                .contains("orange", "green", "violet") // Массив должен содержать цвета: "orange", "green", "violet"
+                .endsWith("gold")   //  Последним цветом в массиве должен быть "gold"
+                .startsWith("aqua")     // Первым цветом в массиве должен быть "aqua"
+                .containsSequence("yellow", "blue")      // В массиве должна быть последовательность цветов "yellow", "blue"
+                .doesNotContain("red", "black"); //Массив не должен содержать цвета: "red", "black"
+>>>>>>> a84acbfa653df6d6723437b016a3259102bc1f70
     }
 
     // 1.8
     public static void checkingHero() {
 
+<<<<<<< HEAD
         // List<String> heroBag = Arrays.asList("Bow", "Axe", "Gold");
         // Hero emmett = new Hero("Emmett", 50, "sword", heroBag, true);
+=======
+        List<String> heroBag = Arrays.asList("Bow", "Axe", "Gold");
+        Hero emmett = new Hero("Emmett", 50, "sword", heroBag, true);
+>>>>>>> a84acbfa653df6d6723437b016a3259102bc1f70
 
         /*
         1. Проверить, что герой создался с именем Emmett
@@ -156,9 +216,19 @@ public class Main {
         4. Проверить содержимое инвентаря героя (не пустой, размер 3, содержимое "Bow", "Axe", "Gold", порядок не важен)
         5. Проверить, что герой человек (свойство true)
         */
+<<<<<<< HEAD
     }
 
     // Черный ящик
+=======
+
+        // assert "Emmett".equals(emmett.getName()): "Name should be Emmett";
+        // Далее продолжите сами ...
+
+    }
+
+    // 1.8 (Черный ящик)
+>>>>>>> a84acbfa653df6d6723437b016a3259102bc1f70
     static class Hero {
         private String name;
         private int armorStrength;
